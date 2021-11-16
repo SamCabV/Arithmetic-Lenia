@@ -52,5 +52,5 @@ Alana:
   - Starting from GOL, implement growth function, work on system visualization
 	
 Sam:
-    - Starting from GOL, Implement non-square kernel and multiple states
+   - Starting from GOL, Implement non-square kernel and multiple states
 
