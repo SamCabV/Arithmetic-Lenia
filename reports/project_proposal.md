@@ -3,7 +3,7 @@ Alana Huitric and Sam Cabrera
 
 # Abstract
 
-We plan to implement and investigate the CA “Lenia” which features a continuous space-time-state and a generalized local rule to generate life-like, self-organizing, autonomous patterns. Furthermore, we plan to extend an idea that the paper “Extended Lenia” presents, which is the use of the average sum of multiple channels for the calculation of an output state. We will extend this idea by investigating if the use of different arithmetic operators (multiplying, dividing, subtracting, etc.) for cross-channel communication to calculate the output state can result in any stable and interesting solutions. 
+We plan to implement and investigate the CA “Lenia” which features a continuous space-time-state and a generalized local rule to generate life-like, self-organizing, autonomous patterns. Furthermore, we plan to extend an idea that the paper “Extended Lenia” presents, which is the use of the average sum of multiple channels for the calculation of an output state. We will extend this idea by investigating if the use of different arithmetic operators (multiplying, dividing, subtracting, etc.) for cross-channel communication to calculate the output state can result in any stable and interesting solitons. 
 
 # Annotated Bibliography
 
