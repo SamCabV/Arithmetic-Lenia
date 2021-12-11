@@ -25,13 +25,13 @@ fig 2: Gaussian Bump/Donut Shaped Kernel
 
   The kernel shell is then defined by using a variable “beta” which is an array typically of length <5 where each value in the array is a real number between 0 and 1. Then for each element in beta it is multiplied by the kernel core function, where the input is the polar distance “r” plus a set distance for each beta after the first. This results in an array of functions that represents multiple co-centric rings as a kernel. 
 
-<img src="pics/kernel_shell.JPG" width="700" height="200" />
+<img src="pics/kernel_shell.JPG" width="200" height="200" />
 fig 3: Complete kernel with a "beta" of length 3 
 
 The growth function, which in lenia replaces the rule check is also defined as a unimodal function, the paper outlines growth functions for lenia being: 
 
 
-<img src="pics/growth_func.JPG" width="500" height="350" />
+<img src="pics/growth_func.JPG" width="700" height="280" />
 fig 4: Growth functions outlined in the original paper
 
 
