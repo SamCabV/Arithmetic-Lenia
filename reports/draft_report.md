@@ -17,15 +17,15 @@ To increase the granularity of the state space for each cell on the world grid, 
 
 These kernels are composed of a ‘core’ and ‘shell’ that are distributed radially. The kernel core is defined by a unimodal function that takes polar distance “r” as an argument such that it creates a ring-like “bump” kernel. The paper outlines functions that create some form of desired ring shape:
 
-<img src="pics/kernel.JPG" width="500" height="400" />
+<img src="pics/kernel.JPG" width="700" height="320" />
 fig 1: Functions outlined in the original lenia paper to be used as "kernel core" 
 
 <img src="pics/kernel_pic.JPG" width="200" height="200" />
 fig 2: Gaussian Bump/Donut Shaped Kernel
 
-The kernel shell is then defined by using a variable “beta” which is an array typically of length <5 where each value in the array is a real number between 0 and 1. Then for each element in beta it is multiplied by the kernel core function, where the input is the polar distance “r” plus a set distance for each beta after the first. This results in an array of functions that represents multiple co-centric rings as a kernel. 
+  The kernel shell is then defined by using a variable “beta” which is an array typically of length <5 where each value in the array is a real number between 0 and 1. Then for each element in beta it is multiplied by the kernel core function, where the input is the polar distance “r” plus a set distance for each beta after the first. This results in an array of functions that represents multiple co-centric rings as a kernel. 
 
-<img src="pics/kernel_shell.JPG" width="200" height="200" />
+<img src="pics/kernel_shell.JPG" width="700" height="200" />
 fig 3: Complete kernel with a "beta" of length 3 
 
 The growth function, which in lenia replaces the rule check is also defined as a unimodal function, the paper outlines growth functions for lenia being: 
