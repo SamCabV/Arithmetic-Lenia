@@ -17,10 +17,18 @@ To increase the granularity of the state space for each cell on the world grid, 
 
 The kernels in discrete Lenia are composed of a ‘core’ and ‘shell’ that are distributed radially. The kernel core is defined by a unimodal function that takes polar distance “r” as an argument such that it creates a ring-like “bump” kernel. The paper outlines functions that create some form of desired ring shape:
 
+![image](https://user-images.githubusercontent.com/60372947/146255422-989559d7-3258-4939-83f6-271c33b205b1.png)
+fig 1: Functions outlined in the original lenia paper to be used as "kernel core"
+![image](https://user-images.githubusercontent.com/60372947/146255481-bb52122e-080a-4602-ab31-b9fd9e696281.png)
+fig 2: Gaussian Bump/Donut Shaped Kernel
 
 The kernel shell is then defined by using a variable “beta” which is an array typically of length <5 where each value is a real number between 0 and 1. Then for each element in beta it is multiplied by the kernel core function, where the input is the polar distance “r” plus a set distance for each beta after the first. This results in an array of functions that represent multiple co-centric rings as a kernel. 
-
+![image](https://user-images.githubusercontent.com/60372947/146255660-0db78ebe-0ffc-43eb-a3c5-37ac3cbc902b.png)
+fig 3: Complete kernel with a "beta" of length 3
 The growth function is Lenia’s replacement for the rule check in GOL. It is defined as a unimodal function which the paper outlines growth functions in Lenia for being:
+
+![image](https://user-images.githubusercontent.com/60372947/146255572-e04ae22a-47e9-40a2-814e-733155c8caf1.png)
+fig 4: Growth functions outlined in the original paper
  
 Where m and s correspond to “growth center” and “growth width” and “u” being the convolution of the kernel and grid. 
 
@@ -36,8 +44,11 @@ Finding solitons is difficult, especially since the parameters need to be finely
 ## Results 
 
 Like the iconic R-pentomino glider is to GOL, the “Orbium” is the iconic glider of Lenia:
-
+![image](https://user-images.githubusercontent.com/60372947/146255711-5a42fd7e-a4ea-4a13-b10f-c8bc8d5c1fe6.png)
+fig. 5: "Orbium" glider
 We were able to replicate it by sweeping different m and s values around the m and s values for “Orbium” found in the paper and flashing patches of random values for the first few steps: 
+![image](https://user-images.githubusercontent.com/60372947/146255849-05d11a1f-1c4e-4a4a-8cfc-81dcda84c3e3.png)
+fig. 6 Orbium glider generated through variable sweep
 
 Though in several hundred runs we found only a handful of gliders and most of them imploded:
 
@@ -61,10 +72,11 @@ Implementing cross channel communication for certain types of arithmetic operati
 
 ## Annotated Bibliography
 
-###Lenia – Biology of Artificial Life
+Lenia – Biology of Artificial Life
 Wang-Chak Chan, Bert. Complex Systems, 2019, 28(3), 251-286.
 This paper proposes a novel approach to generalizing cellular automaton models like game of life to create “smooth” and more complex “lifeforms” than previous models. The ambition of this paper goes beyond simply implementing a new model, but also presents a taxonomical basis for future nomenclature of not only the “lifeforms” created by the model but rules that could be generalized to all artificial life. To justify the taxonomy of the model and to further understand its lifeforms, the paper also proposes a series of statistical metrics that can be collected for each lifeform to discern how “closely related” life forms are to one another. To achieve a smooth implementation of a cellular automaton, the paper proposes using non-square kernels, instead of using a novel idea of a kernel core and kernel shell that use gaussian surfaces, many of which are toroidal in shape, in combination with the output of the kernel convolution using a more sophisticated growth mapping function, and further generalization of the possible state space, which enables Lenia to be implemented as both a continuous and discrete model. This model is purposed to further explore the emergent phenomena that causes life to appear and results with some stunning creatures that look eerily life-like. The paper ends with a series of possible directions to further explore the system.
-###Lenia and Expanded Universe
+
+Lenia and Expanded Universe
 Wang-Chak Chan, Bert, Artificial Life Conference Proceedings 2020
 Furthering the work from their first paper, new extensions of Lenia are presented, including multi-dimensional, multi-channel, and multi-kernel additions which result in creating further life-like and increasingly complex artificial life-forms. With a combitionation of better search algorithms to account for the more complex system, the author demonstrates interesting life-forms that were found, which include systems with the ability to “eat” and “grow”, self-replicate, and various more complicated behaviors. Similar to their previous work, the paper ends with a discussion of the pertiance of Lenia toward the study of actual biological systems and makes observations on the parallels between the two.
 
