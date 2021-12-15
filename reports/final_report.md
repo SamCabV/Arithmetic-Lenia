@@ -77,8 +77,12 @@ The several hundred rest of the test the patches either simply dissolve or creat
 In order to get started with our multi channel/multi kernel work we made a GUI to help search for new solitons:
 
 <img src="pics/big_orb.gif"/>
-***fig 9: GUI for changing variables more easily live***
+***fig 9: GUI for changing variables more easily live, letting us explore and tweak parameters***
 
+An example of a more complex creature we were able to re-create the "Geminium":
+
+<img src="pics/big_orb.gif"/>
+***fig 10: The "Geminium Swimming around until it merges with it's neighbors***
 ## Interpretation
 
 Using the parameters of one of the example notebooks along with the dimensions for one of the creatures ‘Orbium’ we were able to successfully replicate it. However, on our search for other solitons we learned that finding new, or any life at all is quite unlikely. The system needed to create and sustain artificial life is quite fragile and adjusting any of the parameters even slightly can prevent emergent life from appearing at all. This is likely due to the fact that the system is highly granular and even small changes matter. Even after adding basic sliders and inputs, anything other than very specific values would result in the patterns growing uncontrollably or dissolving. This becomes even more difficult moving to variants with even more variables, such as multiple kernels and multiple growth functions, where dozens of variables can determine highly complex creatures like the “fish” or be reduced to waste. Unfortunately at the time we were also unable to implement cross channel communication and multiple kernels.
