@@ -35,7 +35,7 @@ The growth function is Lenia’s replacement for the rule check in GOL. It is de
 
 <img src="pics/growth_func.JPG" width="700" height="280" />
 
-fig 4: Growth functions outlined in the original paper
+***fig 4: Growth functions outlined in the original paper***
  
 Where m and s correspond to “growth center” and “growth width” and “u” being the convolution of the kernel and grid. 
 
@@ -58,7 +58,7 @@ fig. 5: "Orbium" glider
 
 We were able to replicate it by sweeping different m and s values around the m and s values for “Orbium” found in the paper and flashing patches of random values for the first few steps: 
 
-![image](https://user-images.githubusercontent.com/60372947/146255849-05d11a1f-1c4e-4a4a-8cfc-81dcda84c3e3.png)
+<img src="pics/glider.gif" width="200" height="200" />
 
 fig. 6 Orbium glider generated through variable sweep
 
@@ -66,13 +66,18 @@ A neat thing about lenia is that by tweaking the parameters of a given creature,
 
 <img src="pics/glider_f.gif" width="200" height="200" />
 
-***fig 6: Orbium glider explodes into Pattern***
+***fig 7: Orbium glider explodes into Pattern***
 
 The several hundred rest of the test the patches either simply dissolve or create these interesting reaction-diffusion-equation-esque patterns:
 
 <img src="pics/reactdiff.gif" width="200" height="200" />
 
-***fig 7: Pattern generated using a more complex kernel than orbium***
+***fig 8: Pattern generated using a more complex kernel than orbium***
+
+In order to get started with our multi channel/multi kernel work we made a GUI to help search for new solitons:
+
+<img src="pics/sliderGUI.jpg"/>
+***fig 9: GUI for changing variables more easily live***
 
 ## Interpretation
 
