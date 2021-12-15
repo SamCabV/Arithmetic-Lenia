@@ -50,7 +50,7 @@ Using the parameters of one of the example notebooks along with the dimensions f
 
 ## Code
 
-
+The code for this project is in the code folder of this repository, it is a python file and requires pygame dependencies.
 ## Future Steps
 
 In the future we would like to try and find new solitons as well as different kinds of communication for the extension using the new GUI.
