@@ -76,7 +76,7 @@ The several hundred rest of the test the patches either simply dissolve or creat
 
 In order to get started with our multi channel/multi kernel work we made a GUI to help search for new solitons:
 
-<img src="pics/sliderGUI.jpg"/>
+<img src="pics/sliderGUI.gif"/>
 ***fig 9: GUI for changing variables more easily live***
 
 ## Interpretation
