@@ -19,23 +19,23 @@ To increase the granularity of the state space for each cell on the world grid, 
 
 The kernels in discrete Lenia are composed of a ‘core’ and ‘shell’ that are distributed radially. The kernel core is defined by a unimodal function that takes polar distance “r” as an argument such that it creates a ring-like “bump” kernel. The paper outlines functions that create some form of desired ring shape:
 
-<img src="pics/kernel.JPG" width="700" height="320" />
+<img src="reports/pics/kernel.JPG" width="700" height="320" />
 
 ***fig 1: Functions outlined in the original lenia paper to be used as "kernel core"***
 
-<img src="pics/kernel_pic.JPG" width="200" height="200" />
+<img src="reports/pics/kernel_pic.JPG" width="200" height="200" />
 
 ***fig 2: Gaussian Bump/Donut Shaped Kernel***
 
 The kernel shell is then defined by using a variable “beta” which is an array typically of length <5 where each value is a real number between 0 and 1. Then for each element in beta it is multiplied by the kernel core function, where the input is the polar distance “r” plus a set distance for each beta after the first. This results in an array of functions that represent multiple co-centric rings as a kernel. 
 
-<img src="pics/kernel_shell.JPG" width="200" height="200" />
+<img src="reports/pics/kernel_shell.JPG" width="200" height="200" />
 
 ***fig 3: Complete kernel with a "beta" of length 3***
 
 The growth function is Lenia’s replacement for the rule check in GOL. It is defined as a unimodal function which the paper outlines growth functions in Lenia for being:
 
-<img src="pics/growth_func.JPG" width="700" height="280" />
+<img src="reports/pics/growth_func.JPG" width="700" height="280" />
 
 ***fig 4: Growth functions outlined in the original paper***
  
@@ -54,36 +54,36 @@ Finding solitons is difficult, especially since the parameters need to be finely
 
 Like the iconic R-pentomino glider is to GOL, the “Orbium” is the iconic glider of Lenia:
 
-<img src="pics/Capture.JPG" width="200" height="200" />
+<img src="reports/pics/Capture.JPG" width="200" height="200" />
 
 fig. 5: "Orbium" glider
 
 We were able to replicate it by sweeping different m and s values around the m and s values for “Orbium” found in the paper and flashing patches of random values for the first few steps: 
 
-<img src="pics/glider.gif" width="200" height="200" />
+<img src="reports/pics/glider.gif" width="200" height="200" />
 
 fig. 6 Orbium glider generated through variable sweep
 
 A neat thing about lenia is that by tweaking the parameters of a given creature, you can find different similar creatures will may have different large and small variations in shape, size, and behavior. Though in several hundred runs we found only a handful of gliders and most of them imploded or exploted:
 
-<img src="pics/glider_f.gif" width="200" height="200" />
+<img src="reports/pics/glider_f.gif" width="200" height="200" />
 
 ***fig 7: Orbium glider explodes into Pattern***
 
 The several hundred rest of the test the patches either simply dissolve or create these interesting reaction-diffusion-equation-esque patterns:
 
-<img src="pics/reactdiff.gif" width="200" height="200" />
+<img src="reports/pics/reactdiff.gif" width="200" height="200" />
 
 ***fig 8: Pattern generated using a more complex kernel than orbium***
 
 In order to get started with our multi channel/multi kernel work we made a GUI to help search for new solitons:
 
-<img src="pics/big_orb.gif"/>
+<img src="reports/pics/big_orb.gif"/>
 ***fig 9: GUI for changing variables more easily live, letting us explore and tweak parameters***
 
 An example of a more complex creature we were able to re-create the "Geminium":
 
-<img src="pics/big_orb.gif"/>
+<img src="reports/pics/big_orb.gif"/>
 ***fig 10: The "Geminium Swimming around until it merges with it's neighbors***
 ## Interpretation
 
